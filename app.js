@@ -1,21 +1,9 @@
-// const userName = "Max";
+const http = require("http");
+const { Server } = require("https");
 
-// console.log(`Hi ${userName}!`);
-
-const fs = require("fs");
-
-fs.readFile("user-data.txt", (err, data) => {
-  if (err) {
-    console.log(err);
-    return;
-  }
-  console.log(data.toString());
+const server = http.createServer((req, res) => {
+  res.write("hi there");
+  res.end;
 });
 
-fs.writeFile("user-data.txt", "username=Matt", (err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    console.log("Successful");
-  }
-});
+server.listen(3000);
