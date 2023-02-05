@@ -1,7 +1,8 @@
 const http = require("http");
 
 const server = http.createServer((req, res) => {
-  res.write("hi there");
+  res.setHeader("Content-Type", "text/html");
+  res.write("<h2>Hi there</h2>");
   res.end;
 });
 
